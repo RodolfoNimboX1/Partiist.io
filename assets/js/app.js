@@ -55,3 +55,9 @@ window.fbAsyncInit = function() {
         });   
     }
 
+    function PersonalInfo(){
+        FB.api('/me','GET',{fields:'name,last_name,profile_pic'},function(response){
+            console.log(response.name + " " + response.last_name);
+        });
+    };
+

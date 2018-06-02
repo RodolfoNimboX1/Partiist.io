@@ -8,12 +8,14 @@ window.fbAsyncInit = function() {
       version    : 'v2.8'
     });
     FB.getLoginStatus(function(response){
-        if(response.status==='connect'){
+        if(response.status=='connected'){
             console.log("Ok, You are connected. ");
-        }else if(response.status==='not_authorized'){
+            PersonalInfo();
+        }else if(response.status=='not_authorized'){
             console.log("You are NOT connected. ");
         }else{
             console.log("You are NOT in FACEBOOK. ");
+            console.log(response);
         };
     });
     FB.AppEvents.logPageView();
@@ -26,4 +28,38 @@ window.fbAsyncInit = function() {
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            if(response.status=='connected'){
+                console.log("Ok, You are connected. ");
+            }else if(response.status=='not_authorized'){
+                console.log("You are NOT connected. ");
+            }else{
+                console.log("You are NOT in FACEBOOK. ");
+                console.log(response.status);
+            };
+        });
+    }
+
+    function login(){
+        FB.login(function(response){
+            if(response.status=='connected'){
+                console.log("Ok, You are connected. ");
+            }else if(response.status=='not_authorized'){
+                console.log("You are NOT connected. ");
+            }else{
+                console.log("You are NOT in FACEBOOK. ");
+                console.log(response.status);
+            };
+        });   
+    }
+
+    function PersonalInfo(){
+        FB.api('/me','GET',{fields:'first_name,last_name,picture'},function(response){
+            console.log(response.first_name + " " + response.last_name);
+            console.log(response);
+        });
+    };
 

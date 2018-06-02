@@ -7,6 +7,15 @@ window.fbAsyncInit = function() {
       xfbml      : true,
       version    : 'v2.8'
     });
+    FB.getLoginStatus(function(response){
+        if(response.status==='connect'){
+            console.log("Ok, You are connected. ");
+        }else if(response.status==='not_authorized'){
+            console.log("You are NOT connected. ");
+        }else{
+            console.log("You are NOT in FACEBOOK. ");
+        };
+    });
     FB.AppEvents.logPageView();
   };
 

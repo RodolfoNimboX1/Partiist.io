@@ -10,6 +10,7 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response){
         if(response.status=='connected'){
             console.log("Ok, You are connected. ");
+            PersonalInfo();
         }else if(response.status=='not_authorized'){
             console.log("You are NOT connected. ");
         }else{

@@ -8,9 +8,9 @@ window.fbAsyncInit = function() {
       version    : 'v2.8'
     });
     FB.getLoginStatus(function(response){
-        if(response.status==='connected'){
+        if(response.status=='connected'){
             console.log("Ok, You are connected. ");
-        }else if(response.status==='not_authorized'){
+        }else if(response.status=='not_authorized'){
             console.log("You are NOT connected. ");
         }else{
             console.log("You are NOT in FACEBOOK. ");
@@ -31,9 +31,9 @@ window.fbAsyncInit = function() {
 
     function checkLoginState() {
         FB.getLoginStatus(function(response) {
-            if(response.status==='connected'){
+            if(response.status=='connected'){
                 console.log("Ok, You are connected. ");
-            }else if(response.status==='not_authorized'){
+            }else if(response.status=='not_authorized'){
                 console.log("You are NOT connected. ");
             }else{
                 console.log("You are NOT in FACEBOOK. ");
@@ -44,9 +44,9 @@ window.fbAsyncInit = function() {
 
     function login(){
         FB.login(function(response){
-            if(response.status==='connected'){
+            if(response.status=='connected'){
                 console.log("Ok, You are connected. ");
-            }else if(response.status==='not_authorized'){
+            }else if(response.status=='not_authorized'){
                 console.log("You are NOT connected. ");
             }else{
                 console.log("You are NOT in FACEBOOK. ");

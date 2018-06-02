@@ -12,7 +12,7 @@ window.fbAsyncInit = function() {
             console.log("Ok, You are connected. ");
             console.log(response);
             accessToken = response.authResponse.accessToken;
-            PersonalInfo();
+            PersonalInfo(accessToken);
         }else if(response.status=='not_authorized'){
             console.log("You are NOT connected. ");
         }else{
@@ -60,8 +60,8 @@ window.fbAsyncInit = function() {
         });   
     }
 
-    function PersonalInfo(){
-        FB.api('/me','GET',{fields:'first_name,last_name,picture'},function(response){
+    function PersonalInfo(t){
+        FB.api('/me','GET',{access_token: t,fields:'first_name,last_name,email'},function(response){
             console.log(response.first_name + " " + response.last_name);
             console.log(response);
         });

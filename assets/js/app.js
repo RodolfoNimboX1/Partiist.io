@@ -57,8 +57,8 @@ window.fbAsyncInit = function() {
     }
 
     function PersonalInfo(){
-        FB.api('/me','GET',{fields:'name,last_name,profile_pic'},function(response){
-            console.log(response.name + " " + response.last_name);
+        FB.api('/me','GET',{fields:'first_name,last_name,picture'},function(response){
+            console.log(response.first_name + " " + response.last_name);
             console.log(response);
         });
     };

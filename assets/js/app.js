@@ -30,7 +30,13 @@ window.fbAsyncInit = function() {
 
     function checkLoginState() {
         FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
+            if(response.status==='connect'){
+                console.log("Ok, You are connected. ");
+            }else if(response.status==='not_authorized'){
+                console.log("You are NOT connected. ");
+            }else{
+                console.log("You are NOT in FACEBOOK. ");
+            };
         });
     }
 

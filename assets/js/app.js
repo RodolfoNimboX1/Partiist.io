@@ -1,4 +1,4 @@
-
+var accessToken;
 
 //Facebook
 window.fbAsyncInit = function() {
@@ -10,6 +10,8 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response){
         if(response.status=='connected'){
             console.log("Ok, You are connected. ");
+            console.log(response);
+            accessToken = response.authResponse.accessToken;
             PersonalInfo();
         }else if(response.status=='not_authorized'){
             console.log("You are NOT connected. ");
@@ -34,6 +36,7 @@ window.fbAsyncInit = function() {
         FB.getLoginStatus(function(response) {
             if(response.status=='connected'){
                 console.log("Ok, You are connected. ");
+                console.log(response);
             }else if(response.status=='not_authorized'){
                 console.log("You are NOT connected. ");
             }else{
@@ -47,6 +50,7 @@ window.fbAsyncInit = function() {
         FB.login(function(response){
             if(response.status=='connected'){
                 console.log("Ok, You are connected. ");
+                console.log(response);
             }else if(response.status=='not_authorized'){
                 console.log("You are NOT connected. ");
             }else{

@@ -14,6 +14,7 @@ window.fbAsyncInit = function() {
             console.log("You are NOT connected. ");
         }else{
             console.log("You are NOT in FACEBOOK. ");
+            console.log(response);
         };
     });
     FB.AppEvents.logPageView();
@@ -36,6 +37,7 @@ window.fbAsyncInit = function() {
                 console.log("You are NOT connected. ");
             }else{
                 console.log("You are NOT in FACEBOOK. ");
+                console.log(response);
             };
         });
     }

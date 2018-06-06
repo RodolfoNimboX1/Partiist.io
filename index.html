@@ -11,39 +11,23 @@
     <!--CSS link-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--Favicon with logo-->
-    <link rel="icon" href="assets/img/PARTIIST-LOGO.png"/>
+    <link rel="icon" href="assets/img/FAVICAT.png"/>
 
 </head>
 
 <body>
-
     <!--HERE NAV BAR BEGUINS-->
-<nav class="navbar is-link" role="navigation" aria-label="main navigation">
-
-<!--Partiist brand-->
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            
+    <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+    <img src="assets/img/PARTIIST-LOGO.png" alt="Partiist Logo">
+      <div class="navbar-end">
+    <!--Dropdown menu-->
+      <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">
+          Your Integrations
           </a>
-        </div>
 
-<!--Navbar Menu-->
-            <div class="navbar-start">
-              <a class="navbar-item" href="index.html">
-                Party Management System
-              </a>
-            </div>
-
-            <div class="navbar-end">
-              <!--Dropdown menu-->
-              <div class="navbar-item has-dropdown is-hoverable">
-
-                <a class="navbar-link" href="#">
-                  Your Integrations
-                </a>
-
-                <!--Dropdown Menu options-->
-                <div class="navbar-dropdown is-boxed">
+    <!--Dropdown Menu options-->
+          <div class="navbar-dropdown is-boxed">
                   <a class="navbar-item" href="https://www.facebook.com/" target="_blank">
                     Facebook Log In
                   </a>
@@ -60,32 +44,53 @@
             </div>
 </nav>
     <!--HERE NAV BAR FINISHES-->
-    <img src="assets/img/PARTIIST-LOGO.png" alt="Partiist Logo" height="108" width="250">
+
     <!--Sections Begin-->
-
-    <!--My Party details-->
-    <section class="section" id="party-section">
-    <div class="columns">
-          <!--Get Ready to Party!-->
-            <div class="column">
-              <h1>Get Ready to Party!</h1>
-
-              <div class="container">
-                  <div class="box" id="my-parties">
-                here goes the party's made
-                  </div>
-              </div>
-
+<section class="section">
+  <div class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-8 is-parent mainParty">
+            <div class="tile box">
+                <div class="column box">
+                    <div class="has-text-weight-bold">
+                        The Partyers
+                    </div>
+                    <div>
+                      Angie<br> Mary<br> Donna<br> Robert<br> Arthur
+                    </div>
+                </div>
+                <div class="column box">
+                    <div class="has-text-weight-bold">
+                        Food & Drinks
+                    </div>
+                    <div>
+                      Beer!<br> Charcoal<br> Meat<br> Cornchips<br> Tortillas
+                    </div>
+                </div>
+                <div class="column box">
+                    <div class="has-text-weight-bold">
+                        The Noise!
+                    </div>
+                    <div>
+                      Iceland Park<br> Wild Rock Mountain<br> Yellow Pee<br> The Sign<br> Art Time
+                    </div>
+                </div>
             </div>
-
-            <!--Start a new Party-->
+        </div>
+        <div class="tile is-4 is-parent">
+            <div class="tile is-child box">
             <div class="column" id="start-new">
-              <h1>Let's Make a New Party!</h1>
-                <a class="button is-info is-outlined" id="new-party">+ Start a new Party</a>
-           </div>
+                <h1>Let's Make a New Party!</h1>
+                  <a class="button is-info is-outlined" id="new-party">+ Start a new Party</a>
+             </div>
+            </div>
+        </div>
+      </div>
 
-    </div>
-    </section>
+  </div>
+
+</section>
+
     <!--My Party details ends-->
 
     <!--Party Calendar Banner-->

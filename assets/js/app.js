@@ -66,7 +66,7 @@ window.fbAsyncInit = function() {
             console.log(response);
         });
         FB.api('/me/friends',{access_token: t},function(response){
-            console.log("Fiends List:");
+            console.log("Fiends List: 1.1");
             console.log(response);
         });
     };

@@ -65,7 +65,7 @@ window.fbAsyncInit = function() {
             console.log("PI:" + response.first_name + " " + response.last_name);
             console.log(response);
         });
-        FB.api('/me/friends','GET',{access_token: t},function(response){
+        FB.api('/me/friends',{access_token: t},function(response){
             console.log("Fiends List:");
             console.log(response);
         });

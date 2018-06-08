@@ -11,6 +11,7 @@
 #getFont{
     font-family: 'Damion', cursive;
     font-size: 40px;
+    color: white;
 }
 
 #scrolling{
@@ -22,13 +23,13 @@
 }
 
 #thePartyersColor{
-    background-color: white;
+    background-color: lightyellow;
 }
 
 #theFoodColor{
-    background-color: white;
+    background-color: lightyellow;
 }
 
 #theMoneyColor{
-    background-color: white;
+    background-color: lightyellow;
 }

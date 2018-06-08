@@ -6,49 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Partiist: Party Management System</title>
     <!--Bulma CSS CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">  
     <!--CSS link-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--Favicon with logo-->
     <link rel="icon" href="assets/img/FAVICAT.png"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <!--Firebase-->
     <script src=“https://www.gstatic.com/firebasejs/5.0.4/firebase.js“></script>
 </head>
 
 <body>
-
     <!--HERE NAV BAR BEGUINS-->
     <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
     <img src="assets/img/PARTIIST-LOGO.png" alt="Partiist Logo">
       <div class="navbar-end">
     <!--Dropdown menu-->
-      <div class="navbar-item has-dropdown is-hoverable">
-          <a id="getFont" class="navbar-link" href="#">
+      <div class="navbar-item">
+          <a id="getFont" href="https://www.facebook.com/" target="_blank">
           Get to the Party!
           </a>
 
     <!--Dropdown Menu options-->
-          <div class="navbar-dropdown is-boxed">
-                  <a class="navbar-item" href="https://www.facebook.com/" target="_blank">
-                    Facebook Log In
-                  </a>
-                  <a class="navbar-item" href="https://www.walmart.com.mx/inicio" target="_blank">
+          
+                <!--  <a class="navbar-item" href="https://www.walmart.com.mx/inicio" target="_blank">
                     Wal-Mart Log In
                   </a>
                   <a class="navbar-item" href="https://www.spotify.com/mx/" target="_blank">
                     Spotify Log In
                   </a>
+                -->
+                
           </div>
                 
           </div>
-            
-          </div>
+
 </nav>
 
 
-    <!--Sections Begin-->
+    <!--3 SECTION AREA-->
 <section class="section">
   <div class="container">
       <div class="tile is-ancestor">
@@ -59,25 +54,42 @@
                     <div class="has-text-weight-bold">
                         The Partyers
                     </div>
-                    <ul>
-                            <li>Angie</li>
-                            <li>Mary</li>
-                            <li>Donna</li>
-                            <li>Loka</li>
-                            <li>Ruka</li>
-                            <li>Manino</li>
-                            <li>Sammy</li>
-                            <li>Oikos</li>
-                            <li>Devil</li>
-                            <li>Angel</li>
-                            <li>Gama Ray</li>
-                            <li>Bizbirindo</li>
-                            <li>Chueko</li>
-                            <li>La Bizka</li>
-                            <li>Borrachina</li>
-                            <li>La Drunka</li>
-                            <li>Lili Patasola</li>
-                          </ul>  
+                    
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Angie</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Mary</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Donna</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Loka</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Ruka</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Manino</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Sammy</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Oikos</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Devil</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Angel</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Gama Ray</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Bizbirindo</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Chueko</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>La Bizka</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Borrachina</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>La Drunka</p>
+                            <br>
+                            <img src="assets/img/FB_PHOTO.jpg"><p>Lili Patasola</p>
+                            
+                            
                 </div>
 
                 <div class="column box" id="theFoodColor">
@@ -115,6 +127,8 @@
                 </div>
             </div>
         </div>
+
+    <!--LET'S MAKE A PARTY BUTTON-->
         <div class="tile is-4 is-parent">
             <div class="tile">
             <div class="column" id="start-new">
@@ -125,24 +139,24 @@
             </div>
         </div>
       </div>
-
   </div>
-  <meta charset="utf-8">
+
+  <!--CALENDAR-->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
     <script>
     $( function() {
-      $( "#datepicker" ).datepicker();
+    $( "#datepicker" ).datepicker();
     });
     </script>
     
-        <p>Date: <input type="text" id="datepicker"></p>
+    <p>Date: <input type="text" id="datepicker"></p>
 
 </section>
 
-    <!--My Party details ends-->
 
     
 </body>

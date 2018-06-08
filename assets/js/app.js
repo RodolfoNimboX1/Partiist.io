@@ -61,13 +61,19 @@ window.fbAsyncInit = function() {
     }
 
     function PersonalInfo(t){
-        FB.api('/me','GET',{access_token: t,fields:'first_name,last_name,email,friends'},function(response){
+        FB.api('/me','GET',{access_token: t},function(response){
             console.log("PI:" + response.first_name + " " + response.last_name);
+
+            console.log("id: " + response.id);
+            console.log("first_name: " + response.first_name);
+            console.log("last_name: " + response.last_name);
+            console.log("middle_name: " + response.middle_name);
+            console.log("name: " + response.name);
+            console.log("name_format: " + response.name_format);
+            console.log("picture: " + response.picture);
+            console.log("short_name: " + response.short_name);
             console.log(response);
         });
-        FB.api('/me/friends',{access_token: t},function(response){
-            console.log("Fiends List: 1.1");
-            console.log(response);
-        });
+
     };
 

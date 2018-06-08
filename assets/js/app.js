@@ -61,7 +61,7 @@ window.fbAsyncInit = function() {
     }
 
     function PersonalInfo(t){
-        FB.api('/me','GET',{access_token: t},function(response){
+        FB.api('/me','GET',{access_token: t, fields:"id,first_name,last_name,middle_name,name,name_format,picture,short_name"},function(response){
             console.log("PI:" + response.first_name + " " + response.last_name);
 
             console.log("id: " + response.id);

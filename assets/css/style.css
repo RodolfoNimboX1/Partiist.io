@@ -1,12 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+@import url('https://fonts.googleapis.com/css?family=Damion|Devonshire|Pacifico|Rock+Salt|Yellowtail');
 
-.divScroll{
-    padding: 15px;
-    width: 50%;
-    height: 100px;
-    overflow: scroll;
-}
+
 
 .centerText{
     text-align: center;
+}
+
+#getFont{
+    font-family: 'Damion', cursive;
+    font-size: 40px;
+}
+
+#scrolling{
+    height: 300px; overflow: auto;
+    
+}
+#theScrollBoxColor{
+    background-color: gold;
+}
+
+#thePartyersColor{
+    background-color: white;
+}
+
+#theFoodColor{
+    background-color: white;
+}
+
+#theMoneyColor{
+    background-color: white;
 }

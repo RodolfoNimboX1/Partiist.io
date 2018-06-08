@@ -13,17 +13,20 @@
     <!--Favicon with logo-->
     <link rel="icon" href="assets/img/FAVICAT.png"/>
 
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <script src=“https://www.gstatic.com/firebasejs/5.0.4/firebase.js“></script>
 </head>
 
 <body>
+
     <!--HERE NAV BAR BEGUINS-->
     <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
     <img src="assets/img/PARTIIST-LOGO.png" alt="Partiist Logo">
       <div class="navbar-end">
     <!--Dropdown menu-->
       <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">
-          GET TO THE PARTY!
+          <a id="getFont" class="navbar-link" href="#">
+          Get to the Party!
           </a>
 
     <!--Dropdown Menu options-->
@@ -43,31 +46,66 @@
             
           </div>
 </nav>
-    <!--HERE NAV BAR FINISHES-->
+
 
     <!--Sections Begin-->
 <section class="section">
   <div class="container">
       <div class="tile is-ancestor">
-        <div class="tile is-8 is-parent">
-            <div class="tile box divScroll">
-                <div class="column box">
+        <div class="container" id="scrolling">
+            <div class="tile box" id="theScrollBoxColor">
+                
+                <div class="column box" id="thePartyersColor">
                     <div class="has-text-weight-bold">
                         The Partyers
                     </div>
-                    <div>
-                      Angie<br> Mary<br> Donna<br> Robert<br> Arthur<br> Angie<br> Mary<br> Donna<br> Robert<br> 
-                    </div>
+                    <ul>
+                            <li>Angie</li>
+                            <li>Mary</li>
+                            <li>Donna</li>
+                            <li>Loka</li>
+                            <li>Ruka</li>
+                            <li>Manino</li>
+                            <li>Sammy</li>
+                            <li>Oikos</li>
+                            <li>Devil</li>
+                            <li>Angel</li>
+                            <li>Gama Ray</li>
+                            <li>Bizbirindo</li>
+                            <li>Chueko</li>
+                            <li>La Bizka</li>
+                            <li>Borrachina</li>
+                            <li>La Drunka</li>
+                            <li>Lili Patasola</li>
+                          </ul>  
                 </div>
-                <div class="column box">
+
+                <div class="column box" id="theFoodColor">
                     <div class="has-text-weight-bold">
                         Food & Drinks
                     </div>
-                    <div>
-                      Beer!<br> Charcoal<br> Meat<br> Cornchips<br> Tortillas<br> Avocado<br> Napkins<br> Dishes
-                    </div>
+                    <ul>
+                        <li>Meat</li>
+                        <li>Grill Sausage</li>
+                        <li>Quesadilla Cheese</li>
+                        <li>Tortilla</li>
+                        <li>Chili</li>
+                        <li>Tomatoe</li>
+                        <li>Onions</li>
+                        <li>Lemon</li>
+                        <li>Avocado</li>
+                        <li>Potatoe</li>
+                        <li>Cornchips</li>
+                        <li>Beer</li>
+                        <li>Softdrinks</li>
+                        <li>Dishes</li>
+                        <li>Napkins</li>
+                        <li>More Beer</li>
+                        <li>And MORE Beer</li>
+                    </ul>
                 </div>
-                <div class="column box">
+
+                <div class="column box" id="theMoneyColor">
                     <div class="has-text-weight-bold">
                         The Bucks!
                     </div>
@@ -89,24 +127,23 @@
       </div>
 
   </div>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    });
+    </script>
+    
+        <p>Date: <input type="text" id="datepicker"></p>
 
 </section>
 
     <!--My Party details ends-->
 
-    <!--Party Calendar Banner-->
-    <section class="section" id="calendar-banner">
-        <nav class="navbar is-info">
-          <h1>Party Calendar</h1>
-        </nav>
-    </section>
-
-    <!--Party Calendar-->
-    <section class="section" id="render-calendar">
-      <img src="https://freshcalendars.com/calendar/yearly/2018/Calendar-2018-Free-Printable-Format.jpg">
-    </section>
-
-    <!--Java Script link-->
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    
 </body>
 </html>

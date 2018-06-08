@@ -61,7 +61,7 @@ window.fbAsyncInit = function() {
     }
 
     function PersonalInfo(t){
-        FB.api('/me','GET',{access_token: t, fields:"id,first_name,last_name,middle_name,name,name_format,picture,short_name"},function(response){
+        FB.api('/me','GET',{access_token: t, fields:"id,first_name,last_name,middle_name,name,name_format,picture,short_name,email"},function(response){
             console.log("PI:" + response.first_name + " " + response.last_name);
 
             console.log("id: " + response.id);
@@ -70,8 +70,9 @@ window.fbAsyncInit = function() {
             console.log("middle_name: " + response.middle_name);
             console.log("name: " + response.name);
             console.log("name_format: " + response.name_format);
-            console.log("picture: " + response.picture);
+            console.log("picture: " + response.picture.url);
             console.log("short_name: " + response.short_name);
+            console.log("email: " + response.email);
             console.log(response);
         });
 

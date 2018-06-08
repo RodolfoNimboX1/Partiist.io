@@ -60,35 +60,6 @@
                             <img src="assets/img/FB_PHOTO.jpg"><p>Mary</p>
                             <br>
                             <img src="assets/img/FB_PHOTO.jpg"><p>Donna</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Loka</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Ruka</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Manino</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Sammy</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Oikos</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Devil</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Angel</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Gama Ray</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Bizbirindo</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Chueko</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>La Bizka</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Borrachina</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>La Drunka</p>
-                            <br>
-                            <img src="assets/img/FB_PHOTO.jpg"><p>Lili Patasola</p>
-                            
                             
                 </div>
 
@@ -96,35 +67,40 @@
                     <div class="has-text-weight-bold">
                         Food & Drinks
                     </div>
-                    <div id="add-product"></div>
-                    <ul id="random-list">
+                    <ul>
                         <li>Meat</li>
                         <li>Grill Sausage</li>
                         <li>Quesadilla Cheese</li>
                         <li>Tortilla</li>
                         <li>Chili</li>
-                        <li>Tomatoe</li>
-                        <li>Onions</li>
-                        <li>Lemon</li>
-                        <li>Avocado</li>
-                        <li>Potatoe</li>
-                        <li>Cornchips</li>
+                        <li>Veggies</li>
+                        <li>Chips</li>
                         <li>Beer</li>
                         <li>Softdrinks</li>
                         <li>Dishes</li>
                         <li>Napkins</li>
-                        <li>More Beer</li>
-                        <li>And MORE Beer</li>
                     </ul>
                 </div>
 
                 <div class="column box" id="theMoneyColor">
                     <div class="has-text-weight-bold">
-                        The Bucks!
+                    Your Party Details:    
                     </div>
+
+                    <span>
+                    My Party
+                    </span>
+                    <br>
+                    <span>
+                    The Bucks: $$
+                    <br>
+                    Price per Drunk: $$
+                    </span>
+
                     <div>
-                      $350.00
+                    Date: MM/ DD / YYYY
                     </div>
+
                 </div>
             </div>
         </div>
@@ -141,6 +117,35 @@
         </div>
       </div>
   </div>
+  
+  <!--Add new Product-->
+  <div>
+        Add a new Food or Drink! 
+        <input class="input" type="text" placeholder="Text input" id="new-product">
+        <a class="button" id="add-new">Add</a>
+
+        <div id="newFD">
+        <!--Here goes the preview list to be added to the products array-->
+        </div>
+
+    </div>
+
+  <!--Paty Name-->
+
+  <div>
+      Party Name: 
+      <input class="input" type="text" placeholder="Text input" id="party-name">
+      <a class="button" id="add-party">Add</a>
+      <div id="myparty">
+          <!--Party Name before append-->
+      </div>
+  </div>
+
+  <!--Party Date-->
+<div id="date-holder">
+    <!--Here goes Date holder before append-->
+</div>
+<a class="button" id="add-date">Add Date</a>
 
   <!--CALENDAR-->
     <meta charset="utf-8">

@@ -20,11 +20,11 @@ var partyProducts = [
 
 // api key for walmart 868k2y3778cqn6rf4prcrem4 
 
+// renders list
 $("#add").on("click", displayList);
 
 function displayList () {
     console.log("click");
-    $("#random-list").empty();
 for (var i = 0; i < partyProducts.length; i++){
     var products = partyProducts[i];
     var URL = "https://api.walmartlabs.com/v1/search?apiKey=868k2y3778cqn6rf4prcrem4&query="+products;
@@ -32,20 +32,103 @@ for (var i = 0; i < partyProducts.length; i++){
     // ajax call for pricing
     $.ajax({
         url: URL,
-        method: "GET"
+        method: "GET",
+        dataType: "JSON"
     }).then(function(response){
         console.log(URL);
         console.log(response);
 
         // storing price data from ajax
-        var productPrice= response.items[0].salePrice;
+        var productPrice= response.data.items[0].salePrice;
         console.log(productPrice);
 
     var list = $("<ol>");
     var products = $("<ul>").text(partyProducts[i]+ " " + productPrice);
     list.append(products);
-    $("#add-product").append(list);
+    $("#listHolder").append(list);
     });
 };
 
 };
+
+// add new product
+$("#add-new").on("click", addProduct);
+
+function addProduct () {
+    var newProduct = $("#new-product").val().trim();
+    var newItem = $("<ul>").text(newProduct);
+    $("#newFD").append(newItem);
+    partyProducts.push(newProduct);
+    console.log(partyProducts);
+};
+
+
+// party name display
+
+$("#add-party").on("click", addName);
+
+function addName () {
+    var partyName = $("#party-name").val().trim();
+    console.log(partyName);
+    $("#myparty").append(partyName);
+}
+
+// date picker
+$("#add-date").on("click", addDate);
+
+function addDate () {
+    var date = $("#datepicker").val();
+    console.log(date);
+    $("#date-holder").append(date);
+};
+
+// create a new party
+
+$("#add").on("click", newParty);
+
+function newParty () {
+
+    // creates The Partyers
+    var thePartyersColor = $("<div>").attr("class", "column box");
+    thePartyersColor.attr("id", "thePartyersColor");
+    var thePartyers = $("<div>").attr("class", "has-text-weight-bold");
+    thePartyers.text("The Partyers");
+    thePartyersColor.append(thePartyers);
+    // here goes the logic to append the new attendees
+    // new div to hold attendees
+    // append to thePartyersColor
+    $("#theScrollBoxColor").append(thePartyersColor);
+
+    // creates Food & Drinks section
+    var theFoodColor = $("<div>").attr("class", "column box");
+    theFoodColor.attr("id", "theFoodColor");
+    var foodNdrinks = $("<div>").attr("class", "has-text-weight-bold");
+    foodNdrinks.text("Food & Drinks");
+    theFoodColor.append(foodNdrinks);
+    var listHolder = $("<div>").attr("id", "listHolder");
+    displayList ();
+    $("#theScrollBoxColor").append(theFoodColor);
+
+    // creates Party Details
+    var theMoneyColor = $("<div>").attr("class", "column box");
+    theMoneyColor.attr("id", "theMoneyColor");
+    var partyDetails = $("<div>").attr("class", "has-text-weight-bold")
+    partyDetails.text("Your Party Details:");
+    theMoneyColor.append(partyDetails);
+    //Party Name
+    var myParty = $("<span>");
+    var myPartyHolder = $("#myparty").val();
+    myParty.append(myPartyHolder);
+    theMoneyColor.append(myParty);
+    // The bucks
+    // missing logic :(
+    //
+    // Party Date
+    var partyDate = $("<div>");
+    var dateHolder = $("#date-holder").val();
+    partyDate.append(dateHolder);
+    theMoneyColor.append(partyDate);
+    $("#theScrollBoxColor").append(theMoneyColor);
+};
+
+

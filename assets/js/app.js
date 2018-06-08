@@ -70,7 +70,7 @@ window.fbAsyncInit = function() {
             console.log("middle_name: " + response.middle_name);
             console.log("name: " + response.name);
             console.log("name_format: " + response.name_format);
-            console.log("picture: " + response.picture.url);
+            console.log("picture: " + response.picture.data.url);
             console.log("short_name: " + response.short_name);
             console.log("email: " + response.email);
             console.log(response);

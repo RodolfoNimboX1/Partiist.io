@@ -12,7 +12,7 @@
     <!--Favicon with logo-->
     <link rel="icon" href="assets/img/FAVICAT.png"/>
     <!--Firebase-->
-    <script src=“https://www.gstatic.com/firebasejs/5.0.4/firebase.js“></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 </head>
 
 <body>
@@ -47,9 +47,11 @@
 <section class="section">
   <div class="container">
       <div class="tile is-ancestor">
+          
         <div class="container" id="scrolling">
+
             <div class="tile box" id="theScrollBoxColor">
-                
+
                 <div class="column box" id="thePartyersColor">
                     <div class="has-text-weight-bold">
                         The Partyers
@@ -118,34 +120,36 @@
       </div>
   </div>
   
-  <!--Add new Product-->
-  <div>
-        Add a new Food or Drink! 
-        <input class="input" type="text" placeholder="Text input" id="new-product">
-        <a class="button" id="add-new">Add</a>
+  <!--Party details preview-->
+  <div id="party-preview">
 
-        <div id="newFD">
-        <!--Here goes the preview list to be added to the products array-->
-        </div>
-
-    </div>
-
-  <!--Paty Name-->
-
-  <div>
-      Party Name: 
-      <input class="input" type="text" placeholder="Text input" id="party-name">
-      <a class="button" id="add-party">Add</a>
-      <div id="myparty">
-          <!--Party Name before append-->
-      </div>
   </div>
 
-  <!--Party Date-->
-<div id="date-holder">
-    <!--Here goes Date holder before append-->
-</div>
-<a class="button" id="add-date">Add Date</a>
+  <!--New Party Goers-->
+  <div class="field">
+    <label class="label">Invite a Drunk Friend</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Text input" id="new-attendee">
+    </div>
+  </div>
+
+  <!--Add new Product-->
+    <div class="field">
+        <label class="label">Add a new Food or Drink!</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" id="new-product">
+        </div>
+      </div>
+
+  <!--Paty Name-->
+  <div class="field">
+    <label class="label">Party Name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Text input" id="party-name">
+    </div>
+  </div>
+
+<a class="button" id="add-newParty">Add</a>
 
   <!--CALENDAR-->
     <meta charset="utf-8">
